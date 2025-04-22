@@ -15,7 +15,8 @@ title: Programme 2025 – Festival GongFuCha
 
       {% if event.data.people %}
         {% set person = collections.people | find("data.id", event.data.people) %}
-        {{ person }}
+        a{{ person }}a
+        <img src="/assets/img/people/{{ person.data.image }}" alt="" style="max-width:100%;">
         <p><strong>Avec {{ person.data.nom }}</strong></p>
       {% endif %}
 
