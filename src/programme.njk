@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Programme 2025 – Festival GongFuCha
+---
+
+<section class="container">
+  <h1>Programme détaillé</h1>
+  {% for event in collections.events %}
+    <article class="event">
+      <h2>{{ event.data.titre }}</h2>
+
+      {% if event.data.image %}
+        <img src="/assets/img/events/{{ event.data.image }}" alt="" style="max-width:100%;">
+      {% endif %}
+
+      {% if event.data.people %}
+        {% set person = collections.people | find("data.id", event.data.people) %}
+        {{ person }}
+        <p><strong>Avec {{ person.data.nom }}</strong></p>
+      {% endif %}
+
+      {% if event.data.horaire %}
+        <p><strong>Horaire :</strong> {{ event.data.horaire }}</p>
+      {% endif %}
+
+      {% if event.templateContent %}
+        <div class="description">
+          {{ event.templateContent | safe }}
+        </div>
+      {% endif %}
+    </article>
+  {% endfor %}
+</section>

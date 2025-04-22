@@ -1,0 +1,13 @@
+{
+  "name": "festival_gongfucha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "pntbr",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
