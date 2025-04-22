@@ -1,7 +1,7 @@
 ---
 id: ya-lin
 nom: Ya Lin
-image: /assets/images/speakers/ya-lin.jpg
+image: ya-lin.jpg
 alt: Ya-Lin en train de faire le thé.
 url_site: http://brutdethé.fr
 url_insta: ''

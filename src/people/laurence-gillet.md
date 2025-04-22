@@ -1,7 +1,7 @@
 ---
 id: laurence-gillet
 nom: Laurence Gillet
-image: /assets/images/speakers/laurence-gillet.jpg
+image: laurence-gillet.jpg
 alt: laurence de face et sourriante
 url_site: https://www.seasonalitea.fr
 url_insta: ''

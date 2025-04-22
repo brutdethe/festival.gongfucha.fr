@@ -1,7 +1,7 @@
 ---
 id: ivan-moine
 nom: Ivan Moine
-image: /assets/images/speakers/ivan-moine.jpg
+image: ivan-moine.jpg
 alt: Ivan en portrait, regard droit devant
 url_site: https://www.ivanmoine.com
 url_insta: ''

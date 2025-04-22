@@ -1,7 +1,7 @@
 ---
 id: desiree-castillo
 nom: Désirée Castillo
-image: /assets/images/speakers/desiree-castillo.jpg
+image: desiree-castillo.jpg
 alt: Désirée Castillo en train d'écrire
 url_site: https://desirode.sumupstore.com/
 url_insta: ''

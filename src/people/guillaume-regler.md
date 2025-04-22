@@ -1,7 +1,7 @@
 ---
 id: guillaume-regler
 nom: Guillaume Régler
-image: /assets/images/speakers/guillaume-regler.jpg
+image: guillaume-regler.jpg
 alt: Guillaume en auto-portrait, main sur la joue, nous regarde intensément.
 url_site: https://guan-tcha.fr
 url_insta: ''

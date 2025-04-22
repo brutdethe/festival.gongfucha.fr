@@ -1,7 +1,7 @@
 ---
 id: perrine-pottiez
 nom: Perrine Pottiez
-image: /assets/images/speakers/perrine-pottiez.jpg
+image: perrine-pottiez.jpg
 alt: Perrine regarde attentivement une de ses céramiques.
 url_site: https://www.perrinepottiez.com
 url_insta: ''

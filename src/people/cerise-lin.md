@@ -1,7 +1,7 @@
 ---
 id: cerise-lin
 nom: Cerise Lin
-image: /assets/images/speakers/cerise-lin.jpg
+image: cerise-lin.jpg
 alt: Cerise en portrait, regard sourriant
 url_site: ''
 url_insta: ''

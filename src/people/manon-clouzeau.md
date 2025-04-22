@@ -1,7 +1,7 @@
 ---
 id: manon-clouzeau
 nom: Manon Clouzeau
-image: /assets/images/speakers/manon-clouzeau.jpg
+image: manon-clouzeau.jpg
 alt: Manon Clouzeau est en train de tourner des pièces, légèrement masquée par une
   étagère.
 url_site: https://www.manonclouzeau.com

@@ -1,7 +1,7 @@
 ---
 id: ekaterina-drobich
 nom: Ekaterina Drobich
-image: /assets/images/speakers/ekaterina-drobich.jpg
+image: ekaterina-drobich.jpg
 alt: ekaterina déguste un thé
 url_site: https://www.racontemoiunthe.fr
 url_insta: ''

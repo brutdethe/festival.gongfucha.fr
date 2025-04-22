@@ -1,7 +1,7 @@
 ---
 id: sophie-pouly
 nom: Sophie Pouly
-image: /assets/images/speakers/sophie-pouly.jpg
+image: sophie-pouly.jpg
 alt: Sophie en portrait, noir et blanc.
 url_site: https://sophiepouly.wixsite.com/terreetcielpoterie
 url_insta: ''

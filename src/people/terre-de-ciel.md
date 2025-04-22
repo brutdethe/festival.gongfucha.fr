@@ -1,7 +1,7 @@
 ---
 id: terre-de-ciel
 nom: Aude et Dominique
-image: /assets/images/speakers/terre-de-ciel.jpg
+image: terre-de-ciel.jpg
 alt: une galette de Pu'Er
 url_site: https://www.the-puerh.com
 url_insta: ''
