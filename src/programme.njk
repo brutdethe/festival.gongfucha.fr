@@ -19,7 +19,8 @@ title: Programme 2025 – Festival GongFuCha
           {% if person %}
             <div class="person">
               <img src="/assets/img/people/{{ person.data.image }}" alt="{{ person.data.alt or 'Portrait de ' ~ person.data.nom }}" style="max-width:100%;">
-              <p><strong>Avec {{ person.data.nom }}</strong></p>
+              <p><strong>Avec {{ person.data.nom }}</strong> - <a href="{{ person.data.url_site }}">son site</a></p>
+              <p>Bio : {{ person.content | safe }}</p>
             </div>
           {% endif %}
         {% endfor %}
@@ -31,6 +32,7 @@ title: Programme 2025 – Festival GongFuCha
 
       {% if event.templateContent %}
         <div class="description">
+          Description : 
           {{ event.templateContent | safe }}
         </div>
       {% endif %}

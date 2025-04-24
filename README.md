@@ -29,3 +29,4 @@ dossier `_site/` sur la branche `gh-pages` pour servir **https://festival.gongfu
 ## Newsletter
 
 Remplacez `YOUR_MAILERLITE_URL` dans `index.njk` par le formulaire **Mailerlite** intégré.
+
