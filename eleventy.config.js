@@ -7,17 +7,22 @@ export const config = {
   htmlTemplateEngine: 'njk',
   dataTemplateEngine: 'njk',
   templateFormats: ['njk', 'md', 'html'],
-  pathPrefix: '/',
+  pathPrefix: '/2025/',
   langs: { default: 'fr', others: ['en'] }
 };
 
 
 export default function (eleventyConfig) {
-
   eleventyConfig.addPassthroughCopy("2022");
   eleventyConfig.addPassthroughCopy("2023");
   eleventyConfig.addPassthroughCopy({ "src/_assets/img": "assets/img" });
   eleventyConfig.addPassthroughCopy("bundle.css");
+
+  eleventyConfig.addWatchTarget("src/_assets/css/");
+
+  eleventyConfig.addShortcode("imagePath", (image) => {
+    return `${eleventyConfig.pathPrefix}/assets/img/${image}`;
+  });
 
   eleventyConfig.addCollection("people", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/people/*.md");

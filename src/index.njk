@@ -3,31 +3,52 @@ layout: base.njk
 title: Festival GongFuCha 2025
 ---
 
-<section class="hero" style="background:url('/img/hero.jpg') center/cover no-repeat;min-height:60vh;display:flex;align-items:center;">
+<section class="hero">
+  <img src="{{ '/assets/img/hero.jpg' | url }}" alt="Bambous du Parc aux Bambous">
   <div class="container">
-    <h1>Une parenthèse de thé et de bambous, 27‑29 juin 2025.</h1>
-    <p style="margin-block: var(--space-3);">Parc aux Bambous • Lapenne, Ariège</p>
-    <a href="https://boutique.gongfucha.fr/category/festival" class="btn" aria-label="Réserver vos billets">Réserver vos billets</a>
+    <h1>Festival GongFuCha 2025</h1>
+    <p>Une parenthèse de thé et de bambous<br>
+    <strong>27–29 juin 2025 · Parc aux Bambous, Ariège</strong></p>
+    <a href="https://boutique.gongfucha.fr/category/festival" class="btn btn-terre" aria-label="Réserver vos billets">Réserver vos billets</a>
   </div>
 </section>
 
-<section class="container">
-  <h2>Au programme</h2>
-  <div class="grid grid-2">
-    <div><strong>Dégustations</strong><p>Feuilles rares servies au fil des allées.</p></div>
-    <div><strong>Ateliers</strong><p>Cercles d’initiation &amp; céramique.</p></div>
-    <div><strong>Rencontres</strong><p>Artisan·es et passionné·es du thé.</p></div>
-    <div><strong>Conférences</strong><p>Culture, botanique, voyage.</p></div>
+<section class="container section-padded">
+  <h2 class="text-center">Vivez la magie du thé</h2>
+  <p class="text-center max-width-medium">
+    Trois jours hors du temps pour découvrir, goûter, partager des expériences autour du thé, des savoir-faire et des rencontres.
+  </p>
+
+  <div class="grid grid-2 text-center margin-top">
+    <div>
+      <strong>Dégustations</strong>
+      <p>Thés rares et authentiques servis sous les bambous.</p>
+    </div>
+    <div>
+      <strong>Ateliers</strong>
+      <p>Initiations sensorielles & céramique artisanale.</p>
+    </div>
+    <div>
+      <strong>Rencontres</strong>
+      <p>Artisans passionnés, experts et amoureux du thé.</p>
+    </div>
+    <div>
+      <strong>Conférences</strong>
+      <p>Histoires, botanique, traditions & voyages.</p>
+    </div>
   </div>
-  <p style="margin-top:var(--space-3)"><a href="/programme/" class="btn">Voir le programme détaillé</a></p>
+
+  <p class="text-center margin-top">
+    <a href="/2025/programme/" class="btn btn-bamboo" aria-label="Voir le programme complet">Voir le programme complet</a>
+  </p>
 </section>
 
-<section class="container">
-  <h2>Recevez les nouvelles douces</h2>
-  <!-- Mailerlite embed placeholder -->
-  <form action="https://YOUR_MAILERLITE_URL" method="post" style="display:flex;gap:var(--space-2);flex-wrap:wrap;">
-    <label for="ml-email" class="visually-hidden">Email</label>
-    <input id="ml-email" type="email" name="email" placeholder="Votre email" required style="flex:1;padding:var(--space-2);">
-    <button type="submit" class="btn">S’abonner</button>
+<section class="container section-padded bg-cream rounded">
+  <h2 class="text-center">Recevez les nouvelles douces</h2>
+  <p class="text-center">Recevez chaque mois l’actualité du festival, simplement et tranquillement.</p>
+  <form action="https://YOUR_MAILERLITE_URL" method="post" class="newsletter-form">
+    <label for="ml-email" class="visually-hidden">Adresse email</label>
+    <input id="ml-email" type="email" name="email" placeholder="Votre email" required>
+    <button type="submit" class="btn btn-terre">S’abonner</button>
   </form>
 </section>

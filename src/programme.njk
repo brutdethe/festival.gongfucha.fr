@@ -10,7 +10,7 @@ title: Programme 2025 – Festival GongFuCha
       <h2>{{ event.data.titre }}</h2>
 
       {% if event.data.image %}
-        <img src="/assets/img/events/{{ event.data.image }}" alt="" style="max-width:100%;">
+        <img src="{{ "/assets/img/events/" | url }}{{ event.data.image }}" alt="" style="max-width:100%;">
       {% endif %}
 
       {% if event.data.people %}
@@ -18,7 +18,7 @@ title: Programme 2025 – Festival GongFuCha
           {% set person = collections.people | find("data.id", personId) %}
           {% if person %}
             <div class="person">
-              <img src="/assets/img/people/{{ person.data.image }}" alt="{{ person.data.alt or 'Portrait de ' ~ person.data.nom }}" style="max-width:100%;">
+              <img src="{{ "/assets/img/people/" | url }}{{ person.data.image }}" alt="{{ person.data.alt or 'Portrait de ' ~ person.data.nom }}" style="max-width:100%;">
               <p><strong>Avec {{ person.data.nom }}</strong> - <a href="{{ person.data.url_site }}">son site</a></p>
               <p>Bio : {{ person.content | safe }}</p>
             </div>
