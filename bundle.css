@@ -8,84 +8,151 @@
   --space-3:1rem;
   --space-4:2rem;
 
+  --font-lexend: 'Lexend', sans-serif;
   --font-base: 'Inter', system-ui, sans-serif;
   --font-title: 'Arial', sans-serif;
 }
 @import url('tokens.css');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap');
 
-*{
-  box-sizing:border-box;
-  margin:0;padding:0;
-}
-body{
-  font-family:var(--font-base);
-  color:#222;background:var(--color-cream);line-height:1.6;
-}
-h1,h2,h3{
-  font-family:var(--font-title);
-  margin-block:var(--space-3);
-  color:var(--color-bamboo);
-}
-.container{
-  width:90%;
-  max-width:800px;
-  margin-inline:auto;
-  padding-block:var(--space-4);
-}
-.btn{
-  display:inline-block;
-  padding:var(--space-2)var(--space-3);
-  background:var(--color-bamboo);
-  color:white;
-  text-decoration:none;
-  border-radius:4px;
-}
-.btn:hover{
-  opacity:0.9;
-}
-.grid{display:grid;
-  gap:var(--space-3);
+:root {
+  --font-lexend: 'Lexend', sans-serif;
 }
 
-@media(min-width:640px){
-  .grid-2{grid-template-columns:1fr 1fr;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: var(--font-base);
+  color: #222;
+  background: var(--color-cream);
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  margin-block: var(--space-3);
+  color: var(--color-bamboo);
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-block: var(--space-3);
+  color: var(--color-bamboo);
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  margin-block: var(--space-3);
+  color: var(--color-bamboo);
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-block: var(--space-4);
+}
+
+.btn {
+  display: inline-block;
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  font-weight: 500;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bamboo);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Hero avec parallaxe */
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  background-attachment: fixed;
+  background-image: url('/2025/assets/img/hero.jpg');
+  background-size: cover;
+  background-position: center;
 }
-.hero::before {
-  content: "";
+
+.hero-background {
+  display: none;
+}
+
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* voile sombre */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.25));
   z-index: 1;
 }
-.hero h1 {
-  color: var(--color-cream);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 
-}
-.hero img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
 .hero .container {
   position: relative;
   z-index: 2;
+  padding: var(--space-4);
 }
 
-/* UTILITAIRES TYPO ET ESPACEMENTS */
+.hero-title {
+  font-family: var(--font-lexend);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  line-height: 1.1;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  margin-bottom: var(--space-2);
+}
+
+.hero-subtitle {
+  font-family: var(--font-lexend);
+  font-weight: 300;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin-inline: auto;
+  max-width: 40rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: var(--space-4);
+  color: white;
+}
+
+.hero-lieu {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-top: var(--space-1);
+}
+
+.hero .btn {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  padding: var(--space-2) var(--space-4);
+}
+
+/* Grilles & responsive */
+.grid {
+  display: grid;
+  gap: var(--space-3);
+}
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Utilitaires */
 .text-center {
   text-align: center;
 }
@@ -99,8 +166,11 @@ h1,h2,h3{
   max-width: 600px;
   margin-inline: auto;
 }
+.rounded {
+  border-radius: 8px;
+}
 
-/* VARIANTS DE BOUTONS */
+/* Variantes de boutons */
 .btn-bamboo {
   background-color: var(--color-bamboo);
   color: white;
@@ -110,7 +180,7 @@ h1,h2,h3{
   color: white;
 }
 
-/* FORMULAIRE NEWSLETTER */
+/* Formulaire newsletter */
 .newsletter-form {
   display: flex;
   gap: var(--space-2);
@@ -130,10 +200,7 @@ h1,h2,h3{
   white-space: nowrap;
 }
 
-/* BACKGROUND CRÈME ET ARRONDI */
+/* Backgrounds */
 .bg-cream {
   background-color: var(--color-cream);
-}
-.rounded {
-  border-radius: 8px;
 }
