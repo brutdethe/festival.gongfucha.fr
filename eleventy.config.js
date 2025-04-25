@@ -7,7 +7,6 @@ export const config = {
   htmlTemplateEngine: 'njk',
   dataTemplateEngine: 'njk',
   templateFormats: ['njk', 'md', 'html'],
-  pathPrefix: '/2025/',
   langs: { default: 'fr', others: ['en'] }
 };
 

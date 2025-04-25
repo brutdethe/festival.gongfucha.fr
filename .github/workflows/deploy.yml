@@ -41,7 +41,7 @@ jobs:
                   git config --global user.name "pntbr"
 
             - name: Build Project
-              run: npx @11ty/eleventy --pathprefix
+              run: npx @11ty/eleventy
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
