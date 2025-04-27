@@ -191,6 +191,33 @@ h3 {
   color:#555;
 }
 
+/* ---- Bandeau ambiance plein largeur ---- */
+.banner-parc{
+  position: relative;
+  width: 100%;
+  min-height: 60vh;             /* hauteur confort */
+  background: url('/assets/img/banners/ambiance-perrine-768h.jpg') center/cover no-repeat;
+  background-attachment: fixed; /* effet "fixe" sur mobile */
+}
+
+.banner-parc .photo-credits {
+  position: absolute;
+  bottom: 0;
+  right : 0;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #fff;
+  background: rgba(0,0,0,0.55);
+  z-index: 2;
+}
+
+.photo-credits a {
+  color: #fff;
+}
+
+
 /* Grilles & responsive */
 .grid {
   display: grid;
