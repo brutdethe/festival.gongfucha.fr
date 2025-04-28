@@ -10,8 +10,6 @@
 </head>
 <body>
   {{ content | safe }}
-  <footer class="container" style="text-align:center;">
-    <p><a href="https://gongfucha.fr/mentions-legales" aria-label="Mentions légales">Mentions légales</a></p>
-  </footer>
+  {% include 'footer.njk' %}
 </body>
 </html>

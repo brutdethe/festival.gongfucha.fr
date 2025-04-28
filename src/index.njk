@@ -3,95 +3,109 @@ layout: base.njk
 title: Festival GongFuCha 2025
 ---
 
-<section class="hero">
-  <div class="hero-background"></div> <!-- Fond avec image -->
-  <div class="hero-overlay"></div>
+<header class="hero" role="banner">
+  <div class="hero-background" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="container">
     <h1 class="hero-title">un instant de Thé suspendu</h1>
     <p class="hero-subtitle">
-      <strong>Festival GongFuCha</strong> · 27–29 juin 2025<br>
-      <span class="hero-lieu">au Parc aux Bambous, Ariège</span>
+      <strong>Festival&nbsp;GongFuCha</strong> · <time datetime="2025-06-27">27</time>–<time datetime="2025-06-29">29&nbsp;juin&nbsp;2025</time><br>
+      <address class="hero-lieu" translate="no">Parc aux Bambous, Ariège</address>
     </p>
-    <a href="https://boutique.gongfucha.fr/category/festival" class="btn btn-terre">Réserver vos billets</a>
+    <a href="https://boutique.gongfucha.fr/category/festival" class="btn btn-terre">
+      Réserver vos billets
+    </a>
   </div>
-</section>
+</header>
 
-<section class="container section-padded bg-cream rounded uvp">
-  <h2 class="uvp-title">un instant de Présence autour du Thé</h2>
+<main id="content" tabindex="-1">
 
-  <p class="uvp-intro">
-    Pendant trois jours, nous vous invitons à <strong>ralentir</strong> et à entrouvrir une parenthèse hors du temps.
-    Goûter à la richesse d’une culture ancestrale, célébrer <strong>l'art du Thé</strong> comme un geste vivant, sacré, sensible.
-    Tisser des liens simples et vrais avec des personnes artisanes passionnées, des artistes du quotidien, des êtres curieux et inspirants.
-    Un instant suspendu pour <strong>se reconnecter à l’Essentiel</strong>, à soi, aux autres, et à la nature.
-  </p>
+  <section class="section-padded bg-cream uvp" aria-labelledby="uvp-heading">
+    <div class="container">
+      <h2 id="uvp-heading" class="uvp-title text-center">
+        un instant de Présence autour du Thé
+      </h2>
 
-  <div class="grid grid-3 margin-top uvp-pillars">
-    <div class="pillar">
-      <img src="/assets/img/shui.svg" class="pillar-icon" alt="Idéogramme eau (甲骨文) symbolisant l’élément Eau">
-      <h3 class="pillar-title">Ralentir, respirer</h3>
-      <p class="pillar-text">Offrir à son esprit une pause consciente, dans la douceur d’un jardin vivant.</p>
+      <p class="uvp-intro">
+        Pendant trois jours, nous vous invitons à <strong>ralentir</strong> et à entrouvrir une parenthèse hors du temps.
+        Goûter à la richesse d’une culture ancestrale, célébrer <strong>l'art du Thé</strong> comme un geste vivant, sacré, sensible.
+        Tisser des liens simples et vrais avec des personnes artisanes passionnées, des artistes du quotidien, des êtres curieux et inspirants.
+        Un instant suspendu pour <strong>se reconnecter à l’Essentiel</strong>, à soi, aux autres, et à la nature.
+      </p>
+
+      <div class="grid grid-3 margin-top uvp-pillars" role="list">
+        <article class="pillar" role="listitem">
+          <img src="/assets/img/shui.svg" class="pillar-icon" alt="" aria-hidden="true">
+          <h3 class="pillar-title">ralentir, respirer</h3>
+          <p class="pillar-text">Offrir à son esprit une pause consciente, dans la douceur d’un jardin vivant.</p>
+        </article>
+
+        <article class="pillar" role="listitem">
+          <img src="/assets/img/mu.svg" class="pillar-icon" alt="" aria-hidden="true">
+          <h3 class="pillar-title">découvrir l'art du Thé</h3>
+          <p class="pillar-text">Cérémonies ancestrales, Thés authentiques, immersion dans un monde de gestes, de silence et d'arômes.</p>
+        </article>
+
+        <article class="pillar" role="listitem">
+          <img src="/assets/img/huo.svg" class="pillar-icon" alt="" aria-hidden="true">
+          <h3 class="pillar-title">rencontrer, partager</h3>
+          <p class="pillar-text">Des échanges authentiques avec des personnes artisanes et passionnées du Thé, en chair et en cœur.</p>
+        </article>
+      </div>
+
+      <p class="text-center margin-top">
+        <a href="/2025/programme/" class="btn btn-bamboo">
+          voir le programme complet
+        </a>
+      </p>
     </div>
+  </section>
 
-    <div class="pillar">
-      <img src="/assets/img/mu.svg" class="pillar-icon" alt="Idéogramme bois (甲骨文) symbolisant l’élément Bois">
-      <h3 class="pillar-title">Découvrir l'art du Thé</h3>
-      <p class="pillar-text">Cérémonies ancestrales, Thés authentiques, immersion dans un monde de gestes, de silence et d'arômes.</p>
-    </div>
+  <figure class="banner banner-ambiance-perrine" data-loaded="true">
+    <figcaption class="photo-credits">
+      <a href="https://www.perrinepottiez.com" target="_blank" rel="noopener noreferrer">Présentation de pièces de Perrine Pottiez</a>
+      par <a href="http://www.sarahrobine.com" target="_blank" rel="noopener noreferrer" title="voir le site de Sarah Robine">Sarah Robine</a>
+      — <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="Licence Creative Commons" target="_blank" rel="noopener noreferrer">CC BY‑NC‑ND 4.0</a>
+    </figcaption>
+  </figure>
 
-    <div class="pillar">
-      <img src="/assets/img/huo.svg" class="pillar-icon" alt="Idéogramme eau (甲骨文) symbolisant l’élément Feu">
-      <h3 class="pillar-title">Rencontrer, partager</h3>
-      <p class="pillar-text">Des échanges authentiques avec des personnes artisanes et passionnées du Thé, en chair et en cœur.</p>
-    </div>
-  </div>
-</section>
+  <section class="container section-padded" aria-labelledby="story-heading">
+    <h2 id="story-heading" class="story-title text-center">Un festival de Thé, tout léger, léger</h2>
 
-<div class="banner-parc lozad" data-loaded="true">
-  <p class="photo-credits">
-    <a href="https://www.perrinepottiez.com" target="_blank" rel="noopener noreferrer">Présentation de pièces de Perrine Pottiez</a>
-    par <a href="http://www.sarahrobine.com" target="_blank" rel="noopener noreferrer" title="voir la photo en plus grand">Sarah Robine</a>
-    - <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="Licence Creative Commons" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
-  </p>
-</div>
+    <p class="story-intro">
+      Au pied des montagnes, l’<strong>Ariège</strong> offre ses sources les plus limpides ; elles miroitent dans chaque tasse.
+      Dans les dédales du <strong>Parc aux Bambous</strong>, les délicats pavillons de thé accueillent le travail des céramistes, 
+      calligraphes et maîtres-thé ; leurs gestes s’accordent au rythme du <strong>工夫茶 — GōngFūChá</strong>.
+      Les feuilles de Thé frémissent, la vapeur se déploie, et les bambous retiennent leurs souffles.
+      Ici, les personnes artisanes et visiteuses font cercle pour un partage simple.<br>
+      Quelques feuilles de thé, de l'eau chaude, un esprit posé, un peu de savoir-faire,<br>
+      et c’est tout.
+    </p>
 
-<section class="container section-padded">
-  <h2 class="text-center">Vivez la magie du thé</h2>
-  <p class="text-center max-width-medium">
-    Des feuilles et de l’eau pure, un rituel ancestral à partager, pour prendre le temps et se déposer
-    Trois jours hors du temps pour découvrir, goûter, partager des expériences autour du thé, des savoir-faire et des rencontres.
-  </p>
+    <p class="text-center margin-top">
+      <a href="https://photo.gongfucha.fr" class="btn btn-bamboo" target="_blank" rel="noopener noreferrer">
+        voir les photos des éditions passées
+      </a>
+    </p>
+  </section>
 
-  <div class="grid grid-2 text-center margin-top">
-    <div>
-      <strong>Dégustations</strong>
-      <p>Thés rares et authentiques servis sous les bambous.</p>
-    </div>
-    <div>
-      <strong>Ateliers</strong>
-      <p>Initiations sensorielles & céramique artisanale.</p>
-    </div>
-    <div>
-      <strong>Rencontres</strong>
-      <p>Artisans passionnés, experts et amoureux du thé.</p>
-    </div>
-    <div>
-      <strong>Conférences</strong>
-      <p>Histoires, botanique, traditions & voyages.</p>
-    </div>
-  </div>
+  <figure class="banner banner-equipe" data-loaded="true">
+    <figcaption class="photo-credits">
+      <a href="https://festival.gongfucha/2022/" target="_blank" rel="noopener noreferrer">L'équipe du festival 2022</a>
+      par <a href="http://www.sarahrobine.com" target="_blank" rel="noopener noreferrer" title="voir le site de Sarah Robine">Sarah Robine</a>
+      — <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="Licence Creative Commons" target="_blank" rel="noopener noreferrer">CC BY‑NC‑ND 4.0</a>
+    </figcaption>
+  </figure>
 
-  <p class="text-center margin-top">
-    <a href="/2025/programme/" class="btn btn-bamboo" aria-label="Voir le programme complet">Voir le programme complet</a>
-  </p>
-</section>
+  <section class="container section-padded bg-cream" aria-labelledby="newsletter-heading">
+    <h2 id="newsletter-heading" class="text-center">recevez les nouvelles douces</h2>
+    <p class="text-center">Recevez chaque mois l’actualité du festival, simplement et tranquillement.</p>
 
-<section class="container section-padded bg-cream rounded">
-  <h2 class="text-center">Recevez les nouvelles douces</h2>
-  <p class="text-center">Recevez chaque mois l’actualité du festival, simplement et tranquillement.</p>
-  <form action="https://YOUR_MAILERLITE_URL" method="post" class="newsletter-form">
-    <label for="ml-email" class="visually-hidden">Adresse email</label>
-    <input id="ml-email" type="email" name="email" placeholder="Votre email" required>
-    <button type="submit" class="btn btn-terre">S’abonner</button>
-  </form>
-</section>
+    <form action="https://YOUR_MAILERLITE_URL" method="post" class="newsletter-form">
+      <label for="ml-email">Adresse email</label>
+      <input id="ml-email" type="email" name="email" placeholder="Votre email" required>
+      <button type="submit" class="btn btn-terre">S’abonner</button>
+    </form>
+  </section>
+
+</main>
