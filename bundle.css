@@ -20,6 +20,7 @@
   --font-lexend: 'Lexend', sans-serif;
 }
 
+/* === Reset & base === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,49 +35,74 @@ body {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
-h1 {
+/* === Typography === */
+h1,
+h2,
+h3 {
   font-family: var(--font-title);
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  margin-block: var(--space-3);
   color: var(--color-bamboo);
+  margin-block: var(--space-3);
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
 }
 
 h2 {
-  font-family: var(--font-title);
   font-size: clamp(1.6rem, 4vw, 2.2rem);
-  margin-block: var(--space-3);
-  color: var(--color-bamboo);
 }
 
 h3 {
-  font-family: var(--font-title);
   font-size: clamp(1.4rem, 3.5vw, 2rem);
-  margin-block: var(--space-3);
-  color: var(--color-bamboo);
 }
 
+/* === Layout helpers === */
 .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 820px;
   margin-inline: auto;
   padding-block: var(--space-4);
 }
 
+.grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.grid-3 {
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* === Buttons === */
 .btn {
   display: inline-block;
   font-size: clamp(1rem, 1.8vw, 1.1rem);
   font-weight: 500;
   padding: var(--space-2) var(--space-3);
   background: var(--color-bamboo);
-  color: white;
+  color: #fff;
   text-decoration: none;
   border-radius: 4px;
+  transition: opacity .2s;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.btn:hover,
+.btn:focus-visible {
+  opacity: .9;
+  outline: 2px solid var(--color-bamboo);
+  outline-offset: 2px;
 }
 
+.btn-bamboo { background: var(--color-bamboo); }
+.btn-terre  { background: var(--color-terre); }
+
+/* === Hero === */
 .hero {
   font-family: var(--font-lexend);
   position: relative;
@@ -85,20 +111,18 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden;
-  color: white;
+  color: #fff;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25));
-  z-index: 1;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.25));
 }
 
 .hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: var(--space-4);
 }
 
@@ -106,31 +130,24 @@ h3 {
   font-weight: 700;
   font-size: clamp(2.8rem, 6vw, 4rem);
   line-height: 1.1;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 4px 10px rgba(0,0,0,.7);
   margin-bottom: var(--space-2);
-  color: white;
+  color: #fff;
 }
 
 .hero-subtitle {
   font-weight: 300;
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  margin-inline: auto;
   max-width: 40rem;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  margin-bottom: var(--space-4);
+  margin-inline: auto;
+  text-shadow: 0 2px 6px rgba(0,0,0,.5);
+  margin-bottom: var(--space-3);
 }
 
 .hero-lieu {
   display: block;
-  font-size: 0.95rem;
-  font-weight: 300;
-  opacity: 0.8;
-  margin-top: var(--space-1);
-}
-
-.hero .btn {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  padding: var(--space-2) var(--space-4);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-5);
 }
 
 .hero-background {
@@ -138,159 +155,106 @@ h3 {
   inset: 0;
   background: url('/assets/img/hero.jpg') center/cover no-repeat;
   background-attachment: fixed;
-  animation: fadeInBackground 2s ease-in-out 0.2s both;
-  z-index: 0;
+  animation: fadeInBg 2s ease-in-out .2s both;
 }
 
-@keyframes fadeInBackground {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+@keyframes fadeInBg { from { opacity: 0; } to { opacity: 1; } }
 
-/* ---------- UVP SECTION ---------- */
-.uvp-title{
+/* === UVP & Story === */
+.uvp-title,
+.story-title {
   font-family: var(--font-lexend);
   font-weight: 500;
   font-size: clamp(1.9rem, 5vw, 2.6rem);
-  color: var(--color-bamboo);
   margin-bottom: var(--space-3);
 }
 
-.uvp-intro{
-  color:#444;
+.uvp-intro,
+.story-intro {
   font-family: var(--font-lexend);
   font-weight: 300;
   font-size: clamp(1rem, 2.1vw, 1.2rem);
   line-height: 1.8;
-  margin-top:var(--space-3);
+  margin-top: var(--space-3);
+  color: #444;
 }
 
-.uvp-intro strong { 
-  color: var(--color-bamboo);
+.uvp-intro strong { color: var(--color-bamboo); }
+
+/* === Pillars === */
+.pillar {
+  background: #fff;
+  border-radius: 12px;
+  padding: var(--space-3);
+  box-shadow: 0 6px 14px rgba(0,0,0,.03);
+  text-align: center;
+  transition: box-shadow .2s, border .2s;
 }
 
-.pillar{
-  background:#fff;
-  border-radius:12px;
-  padding:var(--space-3);
-  box-shadow:0 6px 14px rgba(0,0,0,0.03);
-}
-
-.pillar:hover {
-  box-shadow: 0 8px 20px rgba(49,92,77,0.1);
+.pillar:hover,
+.pillar:focus-within {
+  box-shadow: 0 8px 20px rgba(49,92,77,.1);
   border: 1px solid var(--color-bamboo);
 }
 
-.pillar-icon{
-  width:5rem;
-  margin-inline:auto;
-  color:var(--color-bamboo);
-}
-
-.pillar-title{
-  font-family:var(--font-lexend);
-  font-size:1rem;
-  margin: 0;
-  margin-bottom: var(--space-2);
-  color:var(--color-bamboo);
-}
-
-.pillar-text{
-  font-family:var(--font-lexend);
-  font-weight:300;
-  font-size:1rem;
-  color:#555;
-}
-
-/* ---- Bandeau ambiance plein largeur ---- */
-.banner-parc{
-  position: relative;
-  width: 100%;
-  min-height: 60vh;             /* hauteur confort */
-  background: url('/assets/img/banners/ambiance-perrine-768h.jpg') center/cover no-repeat;
-  background-attachment: fixed; /* effet "fixe" sur mobile */
-}
-
-.banner-parc .photo-credits {
-  position: absolute;
-  bottom: 0;
-  right : 0;
-  padding: 0.35rem 0.6rem;
-  font-size: 0.75rem;
-  font-style: italic;
-  line-height: 1.4;
-  color: #fff;
-  background: rgba(0,0,0,0.55);
-  z-index: 2;
-}
-
-.photo-credits a {
-  color: #fff;
-}
-
-
-/* Grilles & responsive */
-.grid {
-  display: grid;
-  gap: var(--space-3);
-}
-
-@media (min-width: 640px) {
-  .grid-2 {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.grid-3{
-  display:grid;
-  gap:var(--space-4);
-}
-
-@media (min-width:768px){
-  .grid-3{
-    grid-template-columns:repeat(3,1fr);
-  }
-}
-
-@media (min-width:1024px){
-  .grid-3{
-    gap:var(--space-5);
-  }
-}
-
-/* Utilitaires */
-.text-center {
-  text-align: center;
-}
-.margin-top {
-  margin-top: var(--space-4);
-}
-.section-padded {
-  padding-block: var(--space-4);
-}
-.max-width-medium {
-  max-width: 600px;
+.pillar-icon {
+  width: 5rem;
   margin-inline: auto;
 }
-.rounded {
-  border-radius: 8px;
+
+.pillar-title {
+  font-family: var(--font-lexend);
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
 }
 
-/* Variantes de boutons */
-.btn-bamboo {
-  background-color: var(--color-bamboo);
-  color: white;
-}
-.btn-terre {
-  background-color: var(--color-terre);
-  color: white;
+.pillar-text {
+  font-family: var(--font-lexend);
+  font-weight: 300;
+  font-size: 1rem;
+  color: #555;
 }
 
-/* Formulaire newsletter */
+/* === Banners === */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+}
+
+.banner-ambiance-perrine {
+  background: url('/assets/img/banners/ambiance-perrine-768h.jpg') center/cover no-repeat fixed;
+}
+
+.banner-equipe {
+  background: url('/assets/img/banners/equipe-768h.jpg') center/cover no-repeat fixed;
+}
+
+@media (min-width: 900px) {
+  .banner-ambiance-perrine { background-image: url('/assets/img/banners/ambiance-perrine-1080h.jpg'); }
+  .banner-equipe          { background-image: url('/assets/img/banners/equipe-1080h.jpg'); }
+}
+
+@media (min-width: 1300px) {
+  .banner-ambiance-perrine { background-image: url('/assets/img/banners/ambiance-perrine-1260h.jpg'); }
+  .banner-equipe          { background-image: url('/assets/img/banners/equipe-1260h.jpg'); }
+}
+
+.banner .photo-credits {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: .35rem .6rem;
+  font-size: .75rem;
+  font-style: italic;
+  line-height: 1.4;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+}
+
+.banner .photo-credits a { color: inherit; }
+
+/* === Newsletter form === */
 .newsletter-form {
   display: flex;
   gap: var(--space-2);
@@ -298,6 +262,7 @@ h3 {
   justify-content: center;
   margin-top: var(--space-3);
 }
+
 .newsletter-form input[type="email"] {
   padding: var(--space-2);
   width: 100%;
@@ -306,11 +271,53 @@ h3 {
   border-radius: 4px;
   font-family: var(--font-base);
 }
-.newsletter-form button {
-  white-space: nowrap;
+
+.newsletter-form button { white-space: nowrap; }
+
+/* === Utilities === */
+.text-center { text-align: center; }
+.margin-top  { margin-top: var(--space-4); }
+.section-padded { padding-block: var(--space-4); }
+
+.bg-cream { background-color: var(--color-cream); }
+
+/* === Footer === */
+.site-footer {
+  background: var(--color-bamboo);
+  color: var(--color-cream);
+  padding: var(--space-4) var(--space-3);
 }
 
-/* Backgrounds */
-.bg-cream {
-  background-color: var(--color-cream);
+.footer-inner { max-width: 72rem; margin-inline: auto; }
+
+.footer-nav {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
 }
+
+.footer-heading {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-1); }
+
+.footer-col a {
+  color: var(--color-cream);
+  font-size: .9375rem;
+  text-decoration: none;
+}
+
+.footer-col a:hover,
+.footer-col a:focus-visible { text-decoration: underline; }
+
+.footer-meta {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: .8125rem;
+  opacity: .8;
+}
+
+.footer-meta .copyleft { display: inline-block; transform: rotate(180deg); }
