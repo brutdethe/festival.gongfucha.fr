@@ -14,7 +14,8 @@ export const config = {
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("2022");
   eleventyConfig.addPassthroughCopy("2023");
-  eleventyConfig.addPassthroughCopy({ "src/_assets/img": "assets/img" });
+  eleventyConfig.addPassthroughCopy({ 'src/_assets/icons': 'assets/icons'});
+  eleventyConfig.addPassthroughCopy({ 'src/_assets/img': "assets/img" });
   eleventyConfig.addPassthroughCopy("bundle.css");
 
   eleventyConfig.addWatchTarget("src/_assets/css/");
