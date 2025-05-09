@@ -10,15 +10,10 @@
   --space-5:2.5rem;
 
   --font-lexend: 'Lexend', sans-serif;
-  --font-base: 'Inter', system-ui, sans-serif;
   --font-title: 'Arial', sans-serif;
 }
 @import url('tokens.css');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap');
-
-:root {
-  --font-lexend: 'Lexend', sans-serif;
-}
 
 /* === Reset & base === */
 * {
@@ -28,7 +23,7 @@
 }
 
 body {
-  font-family: var(--font-base);
+  font-family: var(--font-lexend);
   color: #222;
   background: var(--color-cream);
   line-height: 1.6;
@@ -104,7 +99,6 @@ h3 {
 
 /* === Hero === */
 .hero {
-  font-family: var(--font-lexend);
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -163,7 +157,6 @@ h3 {
 /* === UVP & Story === */
 .uvp-title,
 .story-title {
-  font-family: var(--font-lexend);
   font-weight: 500;
   font-size: clamp(1.9rem, 5vw, 2.6rem);
   margin-bottom: var(--space-3);
@@ -171,7 +164,6 @@ h3 {
 
 .uvp-intro,
 .story-intro {
-  font-family: var(--font-lexend);
   font-weight: 300;
   font-size: clamp(1rem, 2.1vw, 1.2rem);
   line-height: 1.8;
@@ -203,13 +195,11 @@ h3 {
 }
 
 .pillar-title {
-  font-family: var(--font-lexend);
   font-size: 1rem;
   margin-bottom: var(--space-2);
 }
 
 .pillar-text {
-  font-family: var(--font-lexend);
   font-weight: 300;
   font-size: 1rem;
   color: #555;
@@ -269,7 +259,6 @@ h3 {
   max-width: 250px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-family: var(--font-base);
 }
 
 .newsletter-form button { white-space: nowrap; }
@@ -283,7 +272,6 @@ h3 {
 .site-footer {
     background: var(--color-bamboo);
     color: var(--color-cream);
-    padding: var(--space-4) var(--space-3);
 }
 
 .footer-inner { 
